@@ -1,0 +1,30 @@
+<template name="catTemplate">
+    <option class="btnCategorySelect" value={{cateogry}}>
+        {{category}}
+    </option>
+</template>
+
+
+<template name="catTemplate2">
+    <li class="btnCategorySelect" value={{cateogry}}>
+        {{category}}
+    </li>
+</template>
+
+<template name="catList">
+
+
+{{#each categories}}
+         <a href="#" class="list-group-item">{{category}} 
+               <div class="btn-group inline pull-right">
+                        <button type="button" class="btn-danger delete btn-xs">
+                            Delete</button>
+                       </div>
+                 </a>
+                {{else}}
+                
+                <h4>No categories added</h4>
+                
+                
+                {{/each}}
+ </template>

@@ -1,0 +1,25 @@
+<template name="test">
+  <div id="nvbar">{{> navigation}}</div>
+  <h2> THis is the test template </h2>
+  <ul>
+  {{#each categories}}
+  {{> catTemplate}}
+  {{/each}}
+  </ul>
+
+<div class="dropdown">
+
+          <select class="form-control" name="catdrop" id="category1">
+    {{#each categories}}
+  {{> catTemplate2}}
+  {{/each}}
+  </select>
+ 
+ 
+</div>
+
+{{> catList}}
+  
+</template>
+
+
