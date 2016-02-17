@@ -1,9 +1,9 @@
 <template name="qform">
   {{> BootstrapAlerts}}
 <!--  {{> navigation}}-->
-  
+
   <!-- this is the dialog modal section. -->
- <div class="modal fade">
+ <div id="qform" class="modal fade">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
 
@@ -29,7 +29,7 @@
 
   <div class="form-inline col-md-8">
    <input type="text" class="form-control" name="textoption2" placeholder="Varianta B">
-   <label class="checkbox-inline ">
+   <label class="checkbox-inline">
       <input type="checkbox" name="inlineCheckbox2" value="option2"> Corect
    </label>
   </div>
@@ -40,11 +40,11 @@
         <input type="checkbox" name="inlineCheckbox3" value="option3"> Corect
      </label>
   </div>
-  
+
 <div class="form-group col-md-4">
   <label for="sel1">Select Category:</label>
   <div class="btn-group inline pull-right">
-       <button type="button" class="btn-info delete btn-xs">
+       <button data-target="#qfrom" data-toggle="modal" type="button" class="btn-info delete btn-xs">
        Add Category</button>
   </div>
   <select class="form-control" name="catdrop" id="category1">
@@ -64,7 +64,5 @@
       </div>
     </div>
   </div>
-  
-
 </template>
 <!-- testing the commits-->

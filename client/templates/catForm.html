@@ -1,20 +1,24 @@
 <template name="catForm">
-     <div class="modal fade">
+
+     <div id="categoryForm" class="modal fade">
+
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-           
+
         <div class="modal-header">
          <h4 class="modal-title">Category Add</h4>
         </div>
 
         <div class="modal-body">
       <!--category name -->
-      
+ <form class="form">
         <div class="form-group col-md-8">
-     <label for="qform">Intrebare</label>
-     <input type="text" class="form-control" name="question" placeholder="Tastati Categoria">
-   </div></div>
-   
+     <label for="catForm">Categorie</label>
+     <input type="text" name="catInput" class="form-control" placeholder="Tastati Categoria">
+   </div>
+   </form>
+ </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" id="saveCat">Save</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -22,6 +26,7 @@
 
       </div>
     </div>
+
   </div>
-    
+
 </template>

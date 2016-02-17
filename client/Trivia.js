@@ -26,7 +26,7 @@ if (Meteor.isClient) {
     this.render('questionList');
   });
   Router.route('/categories', function () {
-    this.render('categories');
+    this.render('catList');
   });
   Router.route('/testing', function () {
     this.render('testing');
@@ -83,4 +83,4 @@ if (Meteor.isClient) {
   });
 
 
-} 
+}

@@ -1,6 +1,8 @@
   Categories = new Mongo.Collection('categories');
    Questions = new Mongo.Collection('questions');
 
+  Modal.allowMultiple = true;
+
 Template.qform.events({
     'submit form': function(event){
 
