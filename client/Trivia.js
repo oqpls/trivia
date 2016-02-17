@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
-    
+
   // counter starts at 0
-   
+
 
 
   Router.route('/', function () {
@@ -31,7 +31,7 @@ if (Meteor.isClient) {
   Router.route('/testing', function () {
     this.render('testing');
   });
-  
+
 
 
   Template.register.events({
@@ -46,21 +46,21 @@ if (Meteor.isClient) {
           Router.go('home');
       }
   });
-  
+
 
     Template.questionList.helpers({
     questions: function () {
       return Questions.find({}).fetch({});
     }
   });
-  
+
    Template.questions.helpers({
     questions: function () {
       return Questions.find({}).fetch({});
     }
   });
-  
-  
+
+
       Template.qform.helpers({
     categories: function () {
       return Categories.find({}).fetch({});
@@ -69,13 +69,13 @@ if (Meteor.isClient) {
       return Questions.find({}).fetch({});
     }
   });
-  
+
   Template.categories.helpers({
     categories: function () {
       return Categories.find({}).fetch({});
     }
   });
-  
+
     Template.catList.helpers({
     categories: function () {
       return Categories.find({}).fetch({});
@@ -83,5 +83,4 @@ if (Meteor.isClient) {
   });
 
 
-}
-
+} 
