@@ -54,12 +54,6 @@ if (Meteor.isClient) {
     }
   });
 
-   Template.questions.helpers({
-    questions: function () {
-      return Questions.find({}).fetch({});
-    }
-  });
-
 
       Template.qform.helpers({
     categories: function () {
@@ -76,11 +70,6 @@ if (Meteor.isClient) {
     }
   });
 
-    Template.catList.helpers({
-    categories: function () {
-      return Categories.find({}).fetch({});
-    }
-  });
 
 
 }
