@@ -37,8 +37,6 @@ Template.qform.events({
     Questions.insert({
       name: $("[name='question']").val(),
       option1: $("[name='textoption1']").val(),
-      option2: $("[name='textoption2']").val(),
-      option3: $("[name='textoption3']").val(),
       corectAnswer: cAnswers,
       category: $( "#category1 option:selected" ).val()
         });
