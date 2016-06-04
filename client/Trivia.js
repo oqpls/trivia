@@ -25,8 +25,8 @@ if (Meteor.isClient) {
   Router.route('/questionList', function () {
     this.render('questionList');
   });
-  Router.route('/categories', function () {
-    this.render('catList');
+  Router.route('/aform', function () {
+    this.render('aform');
   });
   Router.route('/testing', function () {
     this.render('testing');
