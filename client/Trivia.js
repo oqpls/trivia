@@ -23,7 +23,7 @@ if (Meteor.isClient) {
     this.render('qform');
   });
   Router.route('/questionList', function () {
-    this.render('questionList.html');
+    this.render('questionList');
   });
   Router.route('/aform', function () {
     this.render('aform');
