@@ -3,6 +3,13 @@
 .container {
   margin: 5em auto;
 }
+.backgrd {
+    width: 100%;
+    height: 400px;
+    background-image: url('http://www.electrogaspoint.com/images/backs/5657397_6094735Chapwood-website-background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .modal.in {
   -webkit-perspective: 2000px;
   -moz-perspective: 2000px;

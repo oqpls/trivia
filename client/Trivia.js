@@ -7,9 +7,9 @@ if (Meteor.isClient) {
   Router.route('/', function () {
     this.render('/home');
   });
-  Router.route('/test', function () {
+/**  Router.route('/test', function () {
     this.render('test');
-  });
+  });*/
   Router.route('/register', function () {
     this.render('register');
   });
@@ -23,14 +23,12 @@ if (Meteor.isClient) {
     this.render('qform');
   });
   Router.route('/questionList', function () {
-    this.render('questionList');
+    this.render('questionList.html');
   });
   Router.route('/aform', function () {
     this.render('aform');
   });
-  Router.route('/testing', function () {
-    this.render('testing');
-  });
+
 
 
 
