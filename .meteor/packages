@@ -26,3 +26,4 @@ mrt:bootstrap-alerts
 peppelg:bootstrap-3-modal
 bojicas:bootstrap-alerts
 less
+dburles:mongo-collection-instances

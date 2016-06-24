@@ -54,20 +54,11 @@ if (Meteor.isClient) {
 
 
       Template.qform.helpers({
-    categories: function () {
-      return Categories.find({}).fetch({});
-    },
-    questions: function () {
-      return Questions.find({}).fetch({});
-    }
-  });
-
-  Template.categories.helpers({
-    categories: function () {
-      return Categories.find({}).fetch({});
-    }
-  });
-
-
-
+        categories: function () {
+          return Categories.find({}).fetch({});
+        },
+        questions: function () {
+          return Questions.find({}).fetch({});
+        }
+      });
 }

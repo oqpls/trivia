@@ -2,8 +2,9 @@
   {{>navigation}}
 <!--  {{> navigation}}-->
   <!-- this is the dialog modal section. -->
-  <form class="form">
 
+  {{#each question in questions}}
+  <form class="form">
     <div class="container">
         <div class="row">
             <!-- Card Projects -->
@@ -11,7 +12,7 @@
                 <div class="card">
 
                     <div class="card-content">
-                        <h3>Cards for display in portfolio style material design by Google.</h3>
+                        <h3>{{question.name}}</h3>
                     </div>
                     <div class="container-fluid">
                       <div  class=" form-group">
@@ -31,5 +32,19 @@
         </div>
     </div>
   </form>
-</template>
+  {{/each}}
+
+  <script>
+
+  2
+  3
+
+  $(document).ready(
+  $(".card-action" ).on( "click", function() {
+     $( this ).parent().parent().parent().parent().slideUp();
+     console.log("did it work ?")
+  }));
+
+
+  </script></template>
 <!-- testing the commits-->

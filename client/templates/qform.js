@@ -50,3 +50,4 @@ Template.qform.events({
    console.log($( "#category1 option:selected" ).val());
 }
 });
+console.log(Questions)
