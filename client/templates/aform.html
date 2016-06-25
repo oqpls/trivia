@@ -8,6 +8,7 @@
     <div class="container">
         <div class="row">
             <!-- Card Projects -->
+
             <div class="col-md-6 col-md-offset-3">
                 <div class="card">
 
@@ -17,14 +18,14 @@
                     <div class="container-fluid">
                       <div  class=" form-group">
 
-                        <input type="email" class="form-control" id="exampleInputEmail1" required>
+                        <input type="email" class="form-control"  id={{question.id}} required>
                         <span class="form-highlight"></span>
                         <span class="form-bar"></span>
-                        <label class="float-label" for="exampleInputEmail1">Type in your answer</label>
+                        <label class="float-label" for="answer">Type in your answer</label>
                       </div>
                       </div>
 
-                    <div class="card-action">
+                    <div data={{question.id}} class="card-action" >
                         <a href=''>Submit</a>
                     </div>
                 </div>
