@@ -18,14 +18,14 @@
                     <div class="container-fluid">
                       <div  class=" form-group">
 
-                        <input type="email" class="form-control"  id={{question.id}} required>
+                        <input type="email" class="form-control"  id="{{question._id}}" required>
                         <span class="form-highlight"></span>
                         <span class="form-bar"></span>
                         <label class="float-label" for="answer">Type in your answer</label>
                       </div>
                       </div>
 
-                    <div data={{question.id}} class="card-action" >
+                    <div data="{{question._id}}" class="card-action" >
                         <a href=''>Submit</a>
                     </div>
                 </div>

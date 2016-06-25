@@ -28,9 +28,11 @@ Template.aform.events({
       Answer: $("[name='answer']").val(),
     });*/
     $( e.currentTarget ).parent().parent().parent().parent().slideUp();
-    console.log($("#answer").val());
+    console.log(e.currentTarget.attributes.data.value); //questionID
     console.log(Meteor.userId());
-    console.log(Questions.find().fetch())
+    console.log($("#"+e.currentTarget.attributes.data.value).val())
+    console.log(Questions.findOne(e.currentTarget.attributes.data.value).option1)
+
   //  console.log(db.getCollection('users').find({_id}));
 
   }
