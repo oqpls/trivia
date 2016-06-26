@@ -1,51 +1,43 @@
 <template name="aform">
   {{>navigation}}
-<!--  {{> navigation}}-->
+  <!--  {{> navigation}}-->
   <!-- this is the dialog modal section. -->
 
   {{#each question in questions}}
   <form class="form">
     <div class="container">
-        <div class="row">
-            <!-- Card Projects -->
+      <div class="row">
+        <!-- Card Projects -->
 
-            <div class="col-md-6 col-md-offset-3">
-                <div class="card">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="card">
 
-                    <div class="card-content">
-                        <h3>{{question.name}}</h3>
-                    </div>
-                    <div class="container-fluid">
-                      <div  class=" form-group">
-
-                        <input type="email" class="form-control"  id="{{question._id}}" required>
-                        <span class="form-highlight"></span>
-                        <span class="form-bar"></span>
-                        <label class="float-label" for="answer">Type in your answer</label>
-                      </div>
-                      </div>
-
-                    <div data="{{question._id}}" class="card-action" >
-                        <a href=''>Submit</a>
-                    </div>
-                </div>
+            <div class="card-content">
+              <button class="btn btn-danger pull-right close" id="close">Close</button>
+              <h3 id="title">{{question.name}}</h3>
             </div>
+            <div class="container-fluid">
+              <div  class=" form-group">
+
+                <input type="text" placeholder="Type in your answer" class="form-control"  id="{{question._id}}" required>
+                <span class="form-highlight"></span>
+                <span class="form-bar"></span>
+
+              </div>
+            </div>
+
+            <div data="{{question._id}}" class="card-action" >
+              <a href=''>Submit</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </form>
   {{/each}}
 
   <script>
 
-  2
-  3
-
-  $(document).ready(
-  $(".card-action" ).on( "click", function() {
-     $( this ).parent().parent().parent().parent().slideUp();
-     console.log("did it work ?")
-  }));
-
 
   </script></template>
-<!-- testing the commits-->
+  <!-- testing the commits-->
