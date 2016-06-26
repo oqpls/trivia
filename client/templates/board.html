@@ -12,7 +12,11 @@
       </thead>
       <tbody class="table-hover">
         {{#each user in users}}
+<<<<<<< HEAD
         <tr class=".clickrow"> <td>{{user.emails.[0].address}}</td>  <td> {{user._id}} </td> <td><button type="button" class="btn-danger delete" data="{{user._id}}"> Delete</button></td> </tr>
+=======
+        <tr class="clickrow"> <td>{{user.emails.[0].address}}</td>  <td> {{user._id}} </td> <td>{{user._id.createdAt}}</td> </tr>
+>>>>>>> f333295b94feb26bcacc7776d001295e2cef0552
         {{/each}}
       </tbody>
     </table>
