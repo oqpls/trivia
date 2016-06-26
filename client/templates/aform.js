@@ -4,9 +4,7 @@ Meteor.Loader.loadCss("../sylesheets/aform.css");
 */
 Answers = new Mongo.Collection('answers');
 //Users = new Mongo.Collection('users');
-var Users = function () {
-  return users.find({}).fetch({});
-}
+
 Template.aform.helpers({
   questions: function () {
     return Questions.find({}).fetch({});
@@ -35,7 +33,7 @@ Template.aform.events({
     //validate
     var rasp = $("#"+e.currentTarget.attributes.data.value).val().toLowerCase();
     var raspC = Questions.findOne(e.currentTarget.attributes.data.value).option1.toLowerCase() ;
-  
+
     if (rasp == raspC) {
       //If answer matches
       console.log("Raspunsuri",rasp,raspC);

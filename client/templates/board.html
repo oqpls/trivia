@@ -5,14 +5,15 @@
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
-              <th>Prenume</th>
-              <th>Nume</th>
-              <th>Scor</th>
+              <th>Email</th>
+              <th>ID</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="clickrow"> <td>Mark</td>  <td>7218</td> </tr>
-        <tr> <td>Jacob</td>  <td>1234</td> </tr>
+        {{#each user in users}}
+        <tr class="clickrow"> <td>{{user.emails.[0].address}}</td>  <td> {{user._id}} </td> </tr>
+        {{/each}}
+        <tr  class="clickrow"> <td>Jacob</td>  <td>1234</td> </tr>
         <tr> <td>Larry</td>  <td>3123</td> </tr>
       </tbody>
     </table>
