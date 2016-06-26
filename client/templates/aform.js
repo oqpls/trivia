@@ -7,7 +7,7 @@ Answers = new Mongo.Collection('answers');
 
 Template.aform.helpers({
   questions: function () {
-    return Questions.find({}).fetch({});
+    return Questions.find({}, {limit: 25}).fetch({});
   },
   /*users: function () {
   return Users.find({}).fetch({});

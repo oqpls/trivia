@@ -28,6 +28,9 @@ if (Meteor.isClient) {
   Router.route('/aform', function () {
     this.render('aform');
   });
+  Router.route('/alist', function () {
+    this.render('alist');
+  });
 
 
 
