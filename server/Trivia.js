@@ -9,5 +9,9 @@ if (Meteor.isServer) {
 
   });
 
+  Meteor.users.allow({
+  remove: function () { return true; }
+  });
+
 
 }
