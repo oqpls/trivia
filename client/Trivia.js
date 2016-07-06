@@ -33,7 +33,7 @@ if (Meteor.isClient) {
   });
  Router.route('/users', function () {
     this.render('users');
-}); 
+});
 
   Meteor.subscribe('allUsers')
 
@@ -67,4 +67,11 @@ if (Meteor.isClient) {
           return Questions.find({}).fetch({});
         }
       });
+
+      Template.alist.helpers({
+          answers: function () {
+            return Meteor.Answers.find({}).fetch({});
+          },
+        });
+
 }
