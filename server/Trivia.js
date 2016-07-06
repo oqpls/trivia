@@ -10,7 +10,7 @@ if (Meteor.isServer) {
   });
 
   Meteor.users.allow({
-  remove: function () { return true; }
+    remove: function () { return true; }
   });
 
   Meteor.publish('allUsers', function(){

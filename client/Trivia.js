@@ -69,9 +69,9 @@ if (Meteor.isClient) {
       });
 
       Template.alist.helpers({
-          answers: function () {
-            return Meteor.Answers.find({}).fetch({});
-          },
-        });
+      answers: function () {
+        return Answers.find({}).fetch({});
+      }
+    });
 
 }
