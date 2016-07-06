@@ -1,5 +1,5 @@
 Template.alist.helpers({
     answers: function () {
-      return Meteor.Answers.find({}).fetch({});
+      return Meteor.answers.find({}).fetch({});
     },
   });
