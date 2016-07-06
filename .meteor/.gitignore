@@ -4,3 +4,4 @@ local/db - Copy
 local/isopacks
 local/plugin-cache
 local/shell
+local/db/mongod.lock

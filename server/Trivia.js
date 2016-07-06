@@ -18,10 +18,4 @@ if (Meteor.isServer) {
 
   });
 
-  Meteor.publish('allUsers', function(){
-    return Meteor.users.find({}, {fields: {emails: 1, createdAt: 1}})
-
-  });
-
-
 }
