@@ -5,7 +5,7 @@ Template.board.helpers({
     users: function () {
       return Meteor.users.find({}).fetch({});
     },
-});
+  });
 
 Template.board.events({
     'click .clickrow': function(event){

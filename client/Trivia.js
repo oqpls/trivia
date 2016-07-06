@@ -32,7 +32,7 @@ if (Meteor.isClient) {
     this.render('alist');
   });
 
-
+  Meteor.subscribe('allUsers')
 
 
   Template.register.events({
