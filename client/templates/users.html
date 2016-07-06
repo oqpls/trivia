@@ -1,0 +1,28 @@
+<template name="users">
+  {{>navigation}}
+  <div style="height=200px"></div>
+  <div>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+              <th>Email</th>
+            <!--  <th>ID</th> -->
+              <th>Created</th>
+              <th>Score</th>
+        </tr>
+      </thead>
+        <tbody class="table-hover">
+        {{#each user in users}}
+
+        <tr class=".clickrow">
+          <td>{{user.emails.[0].address}}</td>
+          <!--<td>{{user._id}} </td>-->
+          <td>{{user.createdAt.toDateString}} {{user.createdAt.toLocaleTimeString}}</td>
+          <td>{{user.score}}</td>
+         </tr>
+
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>
