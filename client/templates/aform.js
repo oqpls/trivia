@@ -2,7 +2,7 @@
 Meteor.Loader.loadCss("../sylesheets/aform.css");
 };
 */
-Answers = new Mongo.Collection('answers');
+//Answers = new Mongo.Collection('answers');
 //Users = new Mongo.Collection('users');
 
 Template.aform.helpers({

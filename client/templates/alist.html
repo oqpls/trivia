@@ -7,14 +7,14 @@
 
   <div class="list-group">
 {{#each answer in answers}}
-                <a href="#" class="list-group-item">{{Answer}}
+                <a href="#" class="list-group-item">{{answer.Answer}}
                     <div class="btn-group inline pull-right">
                         <button type="button" class="btn-danger delete btn-xs">
                             Delete</button>
                     </div>
                  </a>
                 {{else}}
-                <h4>No questions added</h4>
+                <h4>No answers added</h4>
                 {{/each}}
 
 </div>
