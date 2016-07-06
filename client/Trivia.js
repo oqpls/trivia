@@ -31,6 +31,9 @@ if (Meteor.isClient) {
   Router.route('/alist', function () {
     this.render('alist');
   });
+ Router.route('/users', function () {
+    this.render('users');
+}); 
 
   Meteor.subscribe('allUsers')
 
