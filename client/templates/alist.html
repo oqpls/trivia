@@ -6,8 +6,19 @@
   <!--<button id="add" type="button" class="btn btn-default" >Add</button> -->
 
   <div class="list-group">
-{{#each answer in answers}}
-                <a href="#" class="list-group-item">{{answer._id}}
+    <h2>{{sum}}</h2>
+{{#each answer in answers2}}
+                <a href="#" class="list-group-item">{{answer.Question}}
+                    <div name="userScore" class="btn-group inline pull-right">
+                      {{answer.Score}}
+                    </div>
+                 </a>
+                {{else}}
+                <h4>No answers added</h4>
+{{/each}}
+
+<!--{{#each alist}}
+                <a href="#" class="list-group-item">{{answer.Question}}
                     <div class="btn-group inline pull-right">
                         <button type="button" class="btn-danger delete btn-xs">
                             Delete</button>
@@ -15,7 +26,13 @@
                  </a>
                 {{else}}
                 <h4>No answers added</h4>
-                {{/each}}
+
+{{/each-->
+<!--
+{{Question}} {{Score}} <br>
+{{userId}}<br>
+{{Answer}}<br>
+{{DateAns.toDateString}} - {{DateAns.toLocaleTimeString}}-->
 
 </div>
 </div>

@@ -28,3 +28,4 @@ less
 dburles:mongo-collection-instances
 standard-minifier-css
 standard-minifier-js
+reactive-var

@@ -28,10 +28,22 @@ if (Meteor.isClient) {
   Router.route('/aform', function () {
     this.render('aform');
   });
-  Router.route('/alist', function () {
+/*  Router.route('/alist', function () {
     this.render('alist');
+  });*/
+
+  Router.route('/alist/:_id', function() {
+      this.render('alist', {
+      data: function(){
+        console.log(this.params._id);
+          var userId = this.params._id;
+          return Answers.find({}).fetch({});
+      }
+    })
   });
- Router.route('/users', function () {
+
+
+  Router.route('/users', function () {
     this.render('users');
 });
 
@@ -43,10 +55,11 @@ if (Meteor.isClient) {
           event.preventDefault();
           var email = $('[name=email]').val();
           var password = $('[name=password]').val();
+        
           Accounts.createUser({
               email: email,
-              password: password
-          });
+              password: password,
+                    });
           Router.go('home');
       }
   });

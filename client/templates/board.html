@@ -16,7 +16,7 @@
 
         <tr class=".clickrow">
           <td>{{user.emails.[0].address}}</td>
-          <td>{{user._id}} </td>
+          <td><a href="/alist/{{user._id}}">{{user._id}}</a> </td>
           <td>{{user.createdAt.toDateString}} {{user.createdAt.toLocaleTimeString}}</td>
           <td><button type="button" class="btn-danger delete" data="{{user._id}}"> Delete</button></td>
          </tr>

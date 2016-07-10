@@ -49,7 +49,13 @@ Template.aform.events({
     console.log($("#"+e.currentTarget.attributes.data.value).val()) //Input Answer
     console.log(Questions.findOne(e.currentTarget.attributes.data.value).option1)//Answer from Qform
     console.log("ceva ",Answers.find().fetch())
-    console.log(newScore);
+
+    var currQuestion = $(e.currentTarget).siblings()[0].lastElementChild.innerText.toString()
+    currQuestion = currQuestion.replace(/\r?\n|\r/g, '');
+    console.log(currQuestion);
+
+    console.log($(e.currentTarget).siblings()); //Returns Question form content -> to find title value
+
 
     Answers.insert({
       userId: Meteor.userId(),
@@ -58,6 +64,7 @@ Template.aform.events({
       DateAns : new Date(),
       AnsValid : compare(),
       Score : newScore,
+      Question:currQuestion,
     });
     //  console.log(db.getCollection('users').find({_id}));
 
