@@ -65,6 +65,7 @@ Template.aform.events({
       AnsValid : compare(),
       Score : newScore,
       Question:currQuestion,
+      CorrAns: Questions.findOne(e.currentTarget.attributes.data.value).option1.toLowerCase()
     });
     //  console.log(db.getCollection('users').find({_id}));
 
