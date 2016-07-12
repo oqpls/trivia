@@ -85,5 +85,6 @@ if (Meteor.isClient) {
         return Answers.find({}).fetch({});
       }
     });
+    
 
 }

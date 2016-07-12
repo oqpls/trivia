@@ -2,7 +2,7 @@
 
  Template.users.helpers({
     users: function () {
-      return Meteor.users.find({}).fetch({});
+      return Meteor.users.find({}, {sort: {Score: -1}}).fetch({});
       console.log(this._id);
 
     },
@@ -10,7 +10,7 @@
       return this._id
     },
 
-    sum: function(user){
+    sum: function(){
       /*  console.log(Template.instance().this._id.get());
       var sum=0;
       var cursor=Answers.find({userId:this._id});
@@ -21,6 +21,7 @@
       return this; }
 
   });
+
 
 
 /*

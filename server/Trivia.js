@@ -10,11 +10,13 @@ if (Meteor.isServer) {
   });
 
   Meteor.users.allow({
-    remove: function () { return true; }
+    remove: function () { return true; },
+    update: function () { return true; }
+
   });
 
   Meteor.publish('allUsers', function(){
-    return Meteor.users.find({}, {fields: {emails: 1, createdAt: 1}})
+    return Meteor.users.find({}, {fields: {emails: 1, createdAt: 1, Score: 1}})
 
   });
 

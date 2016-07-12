@@ -9,9 +9,7 @@ Template.aform.helpers({
   questions: function () {
     return Questions.find({}, {limit: 25}).fetch({});
   },
-  /*users: function () {
-  return Users.find({}).fetch({});
-}*/
+
 
 });
 
@@ -53,8 +51,8 @@ Template.aform.events({
     var currQuestion = $(e.currentTarget).siblings()[0].lastElementChild.innerText.toString()
     currQuestion = currQuestion.replace(/\r?\n|\r/g, '');
     console.log(currQuestion);
-
-    console.log($(e.currentTarget).siblings()); //Returns Question form content -> to find title value
+    var userid2 = Meteor.userId()
+    console.log(Users.findOne(userid2)); //Returns Question form content -> to find title value
 
 
     Answers.insert({
@@ -66,6 +64,7 @@ Template.aform.events({
       Score : newScore,
       Question:currQuestion,
       CorrAns: Questions.findOne(e.currentTarget.attributes.data.value).option1.toLowerCase()
+    //  UserName:
     });
     //  console.log(db.getCollection('users').find({_id}));
 
