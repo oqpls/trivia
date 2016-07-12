@@ -7,9 +7,8 @@ if (Meteor.isClient) {
   Router.route('/', function () {
     this.render('/home');
   });
-/**  Router.route('/test', function () {
-    this.render('test');
-  });*/
+  //Router.route('/alist', function () {
+    //this.render('alist');  });
   Router.route('/register', function () {
     this.render('register');
   });
@@ -55,7 +54,7 @@ if (Meteor.isClient) {
           event.preventDefault();
           var email = $('[name=email]').val();
           var password = $('[name=password]').val();
-        
+
           Accounts.createUser({
               email: email,
               password: password,
