@@ -52,7 +52,7 @@ Template.aform.events({
     currQuestion = currQuestion.replace(/\r?\n|\r/g, '');
     console.log(currQuestion);
     var userid2 = Meteor.userId()
-    console.log(Users.findOne(userid2)); //Returns Question form content -> to find title value
+    
 
 
     Answers.insert({

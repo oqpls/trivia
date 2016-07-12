@@ -45,7 +45,7 @@ Template.alist.rendered = function() {
      Meteor.users.update( {_id: usr._id}, {$set : {Score:score.substring(7)}});
 
      }
-   $(document).ready(setTimeout(rdy, 1000));
+   $(document).ready(setTimeout(rdy, 500));
 
 
     };
