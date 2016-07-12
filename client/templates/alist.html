@@ -7,11 +7,15 @@
   <div class="container">
   	<div class="row row-centered">
           <div class="profile-header-container">
+
       		<div class="profile-header-img">
+            <div class="rank-label-container">
+          <span id="score" class="label label-default rank-label .lead"> {{user.emails.[0].address}}</span>
+        </div>
                   <img class="img-circle" src="https://image.freepik.com/free-icon/male-user-silhouette_318-35708.jpg" />
                   <!-- badge -->
                   <div class="rank-label-container">
-                      <span id="score" class="label label-default rank-label .lead">Score: {{sum}} </span>
+                      <span id="score" class="label label-default rank-label .lead">Score: {{sum}}  </span>
                   </div>
               </div>
           </div>

@@ -22,6 +22,11 @@ Template.alist.helpers({
     progress: function () {
       return Answers.find({userId:Router.current().params._id}).count();
     },
+    /*email: function(){
+      var email= Meteor.users.findOne(Meteor.userId()).emails[0].address;
+      console.log("email is", email)
+    }*/
+
 
 });
 Template.alist.rendered = function() {

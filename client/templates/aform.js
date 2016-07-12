@@ -11,6 +11,10 @@ Template.aform.helpers({
   },
 
 
+
+
+
+
 });
 
 Template.aform.events({
@@ -50,10 +54,9 @@ Template.aform.events({
 
     var currQuestion = $(e.currentTarget).siblings()[0].lastElementChild.innerText.toString()
     currQuestion = currQuestion.replace(/\r?\n|\r/g, '');
-    console.log(currQuestion);
-    var userid2 = Meteor.userId()
-    
 
+    var email= Meteor.users.findOne(Meteor.userId()).emails[0].address;
+    console.log("email is", email)
 
     Answers.insert({
       userId: Meteor.userId(),
@@ -63,8 +66,8 @@ Template.aform.events({
       AnsValid : compare(),
       Score : newScore,
       Question:currQuestion,
-      CorrAns: Questions.findOne(e.currentTarget.attributes.data.value).option1.toLowerCase()
-    //  UserName:
+      CorrAns: Questions.findOne(e.currentTarget.attributes.data.value).option1.toLowerCase(),
+      UserName: email
     });
     //  console.log(db.getCollection('users').find({_id}));
 
